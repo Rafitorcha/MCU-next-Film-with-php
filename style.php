@@ -2,6 +2,10 @@
  color-scheme: dark;
  }
  
+body {
+font-family: "Poppins", "Montserrat", sans-serif;
+}
+
  main {
  display: grid;
  column-gap: 50px;
@@ -9,16 +13,67 @@
  padding: 2rem;
  }
  
-a {
+.pointer, .contrast {
 text-decoration: none;
 font-size: 1.3rem;
 color: white;
 cursor: pointer;
-margin: 20px 40px 20px 40px;
 }
 
-a:hover{
-color: #ba3a30;
+a {
+margin: 4.4% 40px 20px 40px;
+}
+
+article p {
+margin: 0px 0 10px 0;
+}
+
+.pointer:hover {
+color: #0a0a0a;
+}
+
+.contrast:hover {
+color: #EE171F;
+}
+
+#check, .cli{
+display: none;
+}
+
+.menu{
+position: absolute;
+background-color: #0a0a0a;
+padding: 1% 0%;
+top: 55%;
+left: 68%;
+}
+
+.menu::before {
+display: block;
+ position: absolute;
+ border-left: 13px solid transparent;
+ border-right: 13px solid transparent;
+ border-bottom: 26px solid #0a0a0a;
+ left: 0px;
+ top: -18px;
+ content: "";
+ font-size: 20px;
+}
+
+li {
+list-style: none;
+padding: 20px;
+}
+
+label{
+margin: 20px;
+position: relative;
+width: 1px;
+height: 1px;
+}
+
+#check:checked + .menu{
+display: block;
 }
 
  hgroup, section {
@@ -29,6 +84,10 @@ color: #ba3a30;
  
 .head-nav{
 display: flex;
+position: relative;
+left: -0.5%;
+top: -0.9%;
+width: 101%;
 flex-direction: row;
 margin: 0;
 padding: 0;
@@ -36,7 +95,7 @@ background-color: #EE171F;
 }
 
 .img-layer {
- width: 60%;
+ width: 50%;
 height: 200px;
 }
 
@@ -62,4 +121,9 @@ padding: 40px 9px 40px 0px;
 text-align: center;
 position: absolute;
 left: -0.5%;
+}
+
+menu {
+background-color: #EE171F;
+position: relative;
 }

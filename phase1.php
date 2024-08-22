@@ -1,5 +1,4 @@
 <?php
-
 const API_URL = "https://api.earth616.org/api/mcu/timeline/category/1/";
 #Initialize a new session for curl; ch = curl handle
 $ch = curl_init(API_URL);
@@ -18,39 +17,36 @@ $data = json_decode($result, true);
 
 curl_close($ch);
 
+$string = $data["mcuTimeLine"]["Phase 1"][0]["imdbcache"]["duration"];
+$look4= "/PT\s+(\w)+/";
+
+if (preg_match($look4, $string, $looking)) {
+$xtrac = str_replace($looking, "", $string);
+}
+
 ?>
 
-<head>
-<meta charset="UTF-8" />
-<meta name="description" content="The next Marvel Film!!!" />
-<meta name="viewport" content="width=device-width, initial-scale="1.0" />
-
-<title>Next Marvel's Fimls!!</title>
-<link rel="stylesheet" href="css/pico.classless.min.css">
-<link rel="stylesheet" type="text/css" href="./style.php">
-</head>
-
-<header>
-<img src="./marvel.webp" />
-</header>
-
-<nav>
-<button>Phase 1</button>
-</nav>
+<?php include "head.php"; ?>
 
 <main>
 <section>
-<h2 style="text-align: center;">The next Marvel film</h2>
+<h2>MCU Timeline: phase I</h2>
 
-<img src=" <?= $data["poster_url"]; ?>" alt="Poster to <?= $data["title"] ?>" style="border-radius: 16px; width: 400px;"/>
+<img src=" <?= $data["mcuTimeLine"]["Phase 1"][0]["imdbcache"]["image"]; ?>" alt="Poster to <?= $data["mcuTimeLine"]["Phase 1"][0]["title"] ?>" style="border-radius: 16px; width: 400px;"/>
 </section>
 
 <hgroup>
-<h3><?= $data["title"]; ?> it's release in <?= $data["days_until"]; ?> days </h3>
- <p>release date: <?= $data["release_date"]; ?></p>
+<h3><?= $data["mcuTimeLine"]["Phase 1"][0]["title"]; ?></h3>
+<article>
+<p> <?= $data["mcuTimeLine"]["Phase 1"][0]["imdbcache"]["description"]; ?> </p>
+<p>released in <?= $data["mcuTimeLine"]["Phase 1"][0]["premiere"]; ?></p> 
+<p>MCU time: <?= $data["mcuTimeLine"]["Phase 1"][0]["mcutime"]; ?></p>
+<p>duration: <?= $xtract; ?></p>
+
+</article>
 </hgroup>
 
 </main>
 
-<footer>Copyright</footer>
 
+<footer> © 2024 MARVEL. All rights reserved </footer>
