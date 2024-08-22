@@ -17,7 +17,7 @@
  <img class="img-layer" src="./Marvel_Logo.svg.png" />
  
  <nav>
- <a href="./home.php" class="pointer"><b>Home</b> </a>
+ <a href="./index.php" class="pointer"><b>Home</b> </a>
  <a ><label for="check" class="pointer"><b>Phases</b></label></a>
  <input type="checkbox" id="check"/>
  <ul class="menu cli">

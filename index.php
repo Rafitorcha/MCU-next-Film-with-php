@@ -25,7 +25,7 @@ curl_close($ch);
 <section>
 <h2>The next Marvel film</h2>
 
-<img src=" <?= $data["poster_url"]; ?>" alt="Poster to <?= $data["title"] ?>" style="border-radius: 16px; width: 400px;"/>
+<img class="next" src=" <?= $data["poster_url"]; ?>" alt="Poster to <?= $data["title"] ?>" style="border-radius: 16px; width: 400px;"/>
 </section>
 
 <hgroup>
