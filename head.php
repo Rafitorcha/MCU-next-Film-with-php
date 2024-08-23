@@ -9,12 +9,12 @@
  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"     rel="stylesheet">
  <link rel="stylesheet" href="css/pico.classless.min.css">
  <link rel="stylesheet" type="text/css" href="./style.php">
- <link rel="icon" href="./spidy.png">
+ <link rel="icon" href="./img/spidy.png">
  </head>
 
 
 <header class="head-nav">
- <img class="img-layer" src="./Marvel_Logo.svg.png" />
+ <img class="img-layer" src="./img/Marvel_Logo.svg.png" />
  
  <nav>
  <a href="./index.php" class="pointer"><b>Home</b> </a>

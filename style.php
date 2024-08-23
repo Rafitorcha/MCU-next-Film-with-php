@@ -36,6 +36,15 @@ color: white;
 cursor: pointer;
 }
 
+.fans{
+display: flex;
+flex-direction: row;
+}
+
+.img2{
+width: 500px;
+}
+
 a {
 margin: 4.4% 40px 20px 40px;
 }
