@@ -4,6 +4,7 @@
  
 body {
 font-family: "Poppins", "Montserrat", sans-serif;
+line-height: 1.5rem;
 }
 
 body{
@@ -34,6 +35,27 @@ text-decoration: none;
 font-size: 1.3rem;
 color: white;
 cursor: pointer;
+}
+
+article p{
+margin-bottom: 20px;
+}
+
+.end{
+margin: 20px 0 20px 0;
+}
+
+.marvelLogo{
+margin: 10px;
+width: 12rem;
+height: 60px;
+background: #EE171F;
+}
+
+.marvelContainer{
+display: flex;
+flex-direction: row;
+justify-content:center;
 }
 
 .fans{
@@ -151,4 +173,10 @@ left: -0.5%;
 menu {
 background-color: #EE171F;
 position: relative;
+}
+
+@media (max-width: 420px) {
+  body {
+ font-size: 30px;
+ }
 }
